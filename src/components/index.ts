@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { space } from '../UI/variaveis'
 import { motion } from 'framer-motion'
 
-export const Box = styled(motion.div)`
+export const Box = styled(motion.aside)`
   position: fixed;
   display: flex;
   justify-content: center;
@@ -38,6 +38,7 @@ export const BoxItensNav = styled.ul`
 `
 export const LiNav = styled(motion.li)`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 0px;
@@ -53,9 +54,13 @@ export const BoxRedLinks = styled(BoxItensNav)`
   height: ${space.partition['x1/3']};
 `
 export const Ancora = styled.a`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   text-align: end;
-  margin-right: 10px;
   text-decoration: none;
+  margin-right: 10px;
   color: ${(props) => props.theme.colors.primary.base};
+  font-weight: 600;
 `

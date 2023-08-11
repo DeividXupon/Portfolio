@@ -3,8 +3,9 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
 
   body {
+    display: flex;
     line-height: 1;
-    background: ${(props) => props.theme.colors.background};
+    background: ${(props) => props.theme.colors.accent.base};
     color: ${(props) => props.theme.colors.textColor.matte};
   }
   

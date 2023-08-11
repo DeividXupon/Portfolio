@@ -4,19 +4,23 @@ import { MdWorkOutline } from 'react-icons/md'
 const NavItens = [
   {
     id: 1,
-    Icon: AiOutlineHome
-  },
-  {
-    id: 2,
-    Icon: AiOutlineMessage
+    Icon: AiOutlineHome,
+    title: 'Home'
   },
   {
     id: 3,
-    Icon: AiOutlineSmile
+    Icon: AiOutlineSmile,
+    title: 'Sobre Mim'
   },
   {
     id: 4,
-    Icon: MdWorkOutline
+    Icon: MdWorkOutline,
+    title: 'Projetos'
+  },
+  {
+    id: 2,
+    Icon: AiOutlineMessage,
+    title: 'Fale Comigo'
   }
 ]
 

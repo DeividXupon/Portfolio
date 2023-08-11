@@ -1,6 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+
+  body {
+    line-height: 1;
+    background: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.textColor.matte};
+  }
+  
+  
   /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -25,14 +33,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-family: ${(props) => props.theme.typography.fontFamily.secondary};
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
   footer, header, hgroup, menu, nav, section {
     display: block;
-  }
-  body {
-    line-height: 1;
   }
   ol, ul {
     list-style: none;

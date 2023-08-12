@@ -41,8 +41,10 @@ declare module 'styled-components' {
           xs: string
           sm: string
           md: string
+          lg_md: string
           lg: string
           xl: string
+          xxl: string
         }
       }
     }

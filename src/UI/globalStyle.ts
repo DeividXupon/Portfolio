@@ -3,10 +3,9 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
 
   body {
-    display: flex;
     line-height: 1;
     background: ${(props) => props.theme.colors.accent.base};
-    color: ${(props) => props.theme.colors.textColor.matte};
+    color: ${(props) => props.theme.colors.textColor.natural};
   }
   
   
@@ -55,6 +54,13 @@ const GlobalStyle = createGlobalStyle`
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+  button {
+    border: none;
+    &:focus {
+      outline: none;
+      border: none;
+    }
   }
 `
 

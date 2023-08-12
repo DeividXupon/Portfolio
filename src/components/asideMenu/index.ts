@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { space } from '../UI/variaveis'
+import { space } from '../../UI/variaveis'
 import { motion } from 'framer-motion'
 
 export const Box = styled(motion.aside)`
@@ -9,6 +9,7 @@ export const Box = styled(motion.aside)`
   align-items: center;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 `
 
 export const LeftMenuNav = styled(motion.nav)`

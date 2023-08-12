@@ -9,12 +9,12 @@ import {
 } from './index'
 import { FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 
-import { space } from '../UI/variaveis'
-import IconeLogo from '../assets/dss.png'
+import { space } from '../../UI/variaveis'
+import IconeLogo from '../../assets/dss.png'
 
 import { ThemeContext } from 'styled-components'
 
-import NavItens from '../data/navItens'
+import NavItens from '../../data/navItens'
 import { DefaultTheme } from 'styled-components/dist/types'
 
 const stylesIcon = {
@@ -68,15 +68,20 @@ function AsideNav() {
                   initial={{
                     scale: 5.5,
                     y: '84%',
-                    border: `0px solid ${theme?.colors.primary[400]}`,
-                    borderTop: 'none'
+                    border: `0px solid ${theme?.colors.primary[400]}`
                   }}
                   animate={{
                     scale: 0.9,
                     y: '-5%',
-                    border: `${space.x1} solid ${theme?.colors.primary.base}`,
-                    borderRadius: `0px 0px ${space.x5 + ' ' + space.x5}`,
-                    borderTop: 'none'
+                    border: `${space.x1} solid ${theme?.colors.primary[200]}`,
+                    borderRadius:
+                      space.x3 +
+                      ' ' +
+                      space.x3 +
+                      ' ' +
+                      space.x3 +
+                      ' ' +
+                      space.x3
                   }}
                   transition={{
                     y: {

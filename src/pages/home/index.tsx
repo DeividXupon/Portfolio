@@ -1,41 +1,56 @@
 import { styled } from 'styled-components'
 import { space } from '../../UI/variaveis'
+import { motion } from 'framer-motion'
 
-export const HomeContainer = styled.main`
+export const HomeContainer = styled(motion.main)`
   display: flex;
   padding-top: ${space.x8};
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 `
 export const MainTitle = styled.h1`
   font-family: ${(props) => props.theme.typography.fontFamily.primary};
   font-size: ${(props) => props.theme.typography.variants.fontSize.xxl};
   font-weight: 600;
-  line-height: ${space.x20};
+  line-height: ${space.x16};
+  transition: 400ms;
+  text-align: center;
 `
 
-export const SubTitle = styled.h2`
+export const SubTitle = styled(motion.h2)`
   font-size: ${(props) => props.theme.typography.variants.fontSize.lg};
   color: ${(props) => props.theme.colors.textColor.matte};
   font-weight: 500;
   margin-bottom: ${space.x8};
   width: ${space.container.xcontainer_md};
+  transition: 400ms;
+  text-align: center;
 `
-export const Intro = styled.p`
+export const Intro = styled(motion.p)`
   font-size: ${(props) => props.theme.typography.variants.fontSize.lg_md};
-  width: ${space.container.xcontainer_md};
+  width: ${space.container.xcontainer_sm};
   font-weight: 300;
   margin-top: ${space.x16};
+  transition: 400ms;
+  text-align: justify;
+
+  > em {
+    color: ${(props) =>
+      props.theme.title === 'dark'
+        ? props.theme.colors.primary.base
+        : props.theme.colors.primary[400]};
+  }
 `
-export const ContainerTitle = styled.div`
+export const ContainerTitle = styled(motion.div)`
   position: relative;
-  width: ${space.container.xcontainer_lg};
+  width: ${space.container.xcontainer_md};
   background: ${(props) => props.theme.colors.secondary.base};
-  padding: ${space.x1 + ' ' + space.x1 + ' ' + space.x5 + ' ' + space.x1};
+  border: solid 1px ${(props) => props.theme.colors.accent['100']};
+  padding: ${space.x3 + ' ' + space.x6 + ' ' + space.x8 + ' ' + space.x6};
   border-radius: ${space.x8};
   overflow: hidden;
+  transition: 200ms;
 `
 export const ButtonAlter = styled.button`
   left: 100%;
@@ -63,7 +78,7 @@ export const ButtonAlter = styled.button`
   }
 `
 
-export const ButtonScroll = styled.button`
+export const ButtonScroll = styled(motion.button)`
   display: flex;
   justify-content: center;
   gap: ${space.x4};

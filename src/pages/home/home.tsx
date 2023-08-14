@@ -31,24 +31,59 @@ function Home() {
   const handleButtonClick = () => {
     setIsAnimating(true)
 
-    // Após um tempo, resetar a animação
     setTimeout(() => {
       setIsAnimating(false)
-    }, 1050) // Tempo em milissegundos
+    }, 1050)
+  }
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 5,
+        staggerChildren: 0.3
+      }
+    }
+  }
+
+  const itemVar1 = {
+    hidden: { x: 40, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.65, 0, 0.35, 1]
+      }
+    }
+  }
+
+  const itemVar2 = {
+    hidden: { x: -40, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: [0.65, 0, 0.35, 1]
+      }
+    }
   }
 
   return (
-    <HomeContainer>
-      <SubTitle>Explorando a Fronteira da Web</SubTitle>
-      <ContainerTitle>
+    <HomeContainer variants={container} initial="hidden" animate="visible">
+      <SubTitle variants={itemVar1}>Explorando a Fronteira da Web</SubTitle>
+      <ContainerTitle variants={itemVar2}>
         <ThemeConsumer>
           {(theme) => (
             <>
               <motion.div
                 style={{
                   position: 'absolute',
-                  left: '50%',
-                  top: '50%',
+                  left: '95%',
+                  top: '80%',
                   transform: 'translate(-50%, -50%)',
                   borderRadius: '50%'
                 }}
@@ -62,8 +97,8 @@ function Home() {
                   isAnimating
                     ? {
                         opacity: [1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
-                        width: '2000px',
-                        height: '2000px'
+                        width: '4000px',
+                        height: '4000px'
                       }
                     : {
                         background: theme?.colors.secondary.base,
@@ -122,15 +157,15 @@ function Home() {
           )}
         </ThemeConsumer>
       </ContainerTitle>
-      <Intro>
-        Bem-vindo ao meu portfolio! Sou apaixonado por transformar conceitos em
-        realidade através do desenvolvimento web. Combinando criatividade e
-        código, estou empenhado em criar soluções digitais impactantes que
-        impressionam visualmente e funcionam excepcionalmente. Explore meu
-        portfólio e descubra como minha jornada na web dá vida a projetos únicos
-        e envolventes que impulsionam a experiência online a novos patamares.
+      <Intro variants={itemVar1}>
+        Primeiramente, seja <em>bem-vindo</em> ao meu portfólio. Agradeço por
+        visitar. Uma sinergia perfeita entre a arte do <em>Design</em>, a
+        maestria do Desenvolvimento <em>FrontEnd</em> e habilidades
+        profissionais excepcionais é o que verdadeiramente <em>elevará</em> o
+        seu produto a um patamar destacado no mercado. É exatamente isso que
+        estou <em>oferecendo a você</em>. E então, que tal trabalharmos juntos?
       </Intro>
-      <ButtonScroll>
+      <ButtonScroll variants={itemVar2}>
         <p>Scroll</p>
         <BiMouse size={30} />
       </ButtonScroll>

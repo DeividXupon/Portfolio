@@ -16,4 +16,5 @@ export const Father = styled(motion.div)`
   background: ${(props) => props.theme.colors.background};
   overflow-x: hidden;
   padding-left: ${space.x20};
+  transition: background 300ms;
 `

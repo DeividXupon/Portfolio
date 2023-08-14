@@ -9,17 +9,17 @@ export default {
     },
     background: '#e8e9e8',
     primary: {
-      '000': '#dfffff',
-      '050': '#d5f8f4',
-      base: '#b9e9e3',
-      '150': '#98DDD5',
-      '200': '#78c9bf',
-      '400': '#54a89e'
+      '000': '#b9e9e3',
+      '050': '#98DDD5',
+      base: '#78c9bf',
+      '150': '#54a89e',
+      '200': '#11524a',
+      '400': '#11524a'
     },
     secondary: {
       '000': '#9797a1',
       '050': '#b0b0b8',
-      base: '#babac2'
+      base: '#f4f4f4'
     },
     accent: {
       '000': '#909194',
@@ -41,7 +41,7 @@ export default {
         lg_md: '1.2em',
         lg: '2em',
         xl: '3em',
-        xxl: '4.5em'
+        xxl: '3.3em'
       }
     }
   }

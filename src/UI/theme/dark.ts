@@ -41,7 +41,7 @@ export default {
         lg_md: '1.2em',
         lg: '2em',
         xl: '3em',
-        xxl: '4.5em'
+        xxl: '3.3em'
       }
     }
   }

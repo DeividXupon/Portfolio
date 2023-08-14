@@ -7,6 +7,20 @@ const GlobalStyle = createGlobalStyle`
     background: ${(props) => props.theme.colors.accent.base};
     color: ${(props) => props.theme.colors.textColor.natural};
   }
+
+
+  &::-webkit-scrollbar {
+    width: 10px; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.colors.primary[150]};
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: ${(props) => props.theme.colors.secondary['050']}; 
+  }
   
   
   /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -59,7 +73,6 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     &:focus {
       outline: none;
-      border: none;
     }
   }
 `

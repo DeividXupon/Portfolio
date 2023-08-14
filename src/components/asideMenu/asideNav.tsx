@@ -27,15 +27,14 @@ function AsideNav() {
   function LiNavProps(theme: DefaultTheme | undefined) {
     return {
       initial: {
-        width: space.x20,
-        background: theme?.colors.secondary.base,
         fontSize: 0,
         color: '#fff'
       },
       whileHover: {
         width: space.x52,
-        borderRight: `9px solid ${theme?.colors.primary.base}`,
-        background: theme?.colors.secondary['050'],
+        height: '58px',
+        borderRight: `6px solid ${theme?.colors.primary.base}`,
+        borderTop: `1px solid ${theme?.colors.primary.base}`,
         fontSize: '1.15em'
       },
       transition: {
@@ -62,40 +61,28 @@ function AsideNav() {
       >
         <BoxItensNav>
           <LiNav>
-            <ThemeContext.Consumer>
-              {(theme) => (
-                <Logo
-                  initial={{
-                    scale: 5.5,
-                    y: '84%',
-                    border: `0px solid ${theme?.colors.primary[400]}`
-                  }}
-                  animate={{
-                    scale: 0.9,
-                    y: '-5%',
-                    border: `${space.x1} solid ${theme?.colors.primary[200]}`,
-                    borderRadius:
-                      space.x3 +
-                      ' ' +
-                      space.x3 +
-                      ' ' +
-                      space.x3 +
-                      ' ' +
-                      space.x3
-                  }}
-                  transition={{
-                    y: {
-                      delay: 3.2
-                    },
-                    delay: 1.9,
-                    ease: [0.85, 0, 0.15, 1],
-                    duration: 0.5
-                  }}
-                  src={IconeLogo}
-                  alt="Logo"
-                />
-              )}
-            </ThemeContext.Consumer>
+            <Logo
+              initial={{
+                scale: 5.5,
+                y: '84%'
+              }}
+              animate={{
+                scale: 0.9,
+                y: '0%',
+                borderRadius:
+                  space.x3 + ' ' + space.x3 + ' ' + space.x3 + ' ' + space.x3
+              }}
+              transition={{
+                y: {
+                  delay: 3.2
+                },
+                delay: 1.9,
+                ease: [0.85, 0, 0.15, 1],
+                duration: 0.5
+              }}
+              src={IconeLogo}
+              alt="Logo"
+            />
           </LiNav>
 
           <ThemeContext.Consumer>

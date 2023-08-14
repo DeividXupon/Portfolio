@@ -21,14 +21,16 @@ export const LeftMenuNav = styled(motion.nav)`
   align-items: center;
   left: ${space.partition['x5/12']};
   top: 50%;
+  border-right: solid 1px ${(props) => props.theme.colors.accent['100']};
+  transition: background 600ms;
 `
 
 export const Logo = styled(motion.img)`
   height: ${space.x20};
   width: ${space.x20};
-  margin-bottom: ${space.x16};
+  margin-bottom: ${space.x14};
 `
-export const BoxItensNav = styled.ul`
+export const BoxItensNav = styled(motion.ul)`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -46,6 +48,7 @@ export const LiNav = styled(motion.li)`
   border-radius: 0px 10px 10px 0px;
   background: ${(props) => props.theme.colors.secondary.base};
   border: 0px solid ${(props) => props.theme.colors.secondary.base};
+  transition: background 600ms;
 `
 export const BoxRedLinks = styled(BoxItensNav)`
   align-items: center;

@@ -51,7 +51,6 @@ export const ModalHover = styled(motion.div)<{ $item: number; $exit: number }>`
 
   > h5 {
     font-size: ${(p) => p.theme.typography.variants.fontSize.lg};
-    font-family: ${(p) => p.theme.typography.fontFamily.primary};
     font-weight: bold;
     margin-bottom: ${space.x5};
   }

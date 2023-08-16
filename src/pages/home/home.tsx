@@ -4,6 +4,7 @@ import {
   ContainerTitle,
   HomeContainer,
   Intro,
+  Lik,
   MainTitle,
   SubTitle
 } from './index'
@@ -166,8 +167,10 @@ function Home() {
         estou <em>oferecendo a você</em>. E então, que tal trabalharmos juntos?
       </Intro>
       <ButtonScroll variants={itemVar2}>
-        <p>Scroll</p>
-        <BiMouse size={30} />
+        <Lik href="#sobre">
+          <p>Scroll</p>
+          <BiMouse size={30} />
+        </Lik>
       </ButtonScroll>
     </HomeContainer>
   )

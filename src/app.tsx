@@ -8,6 +8,7 @@ import Home from './pages/home/home.tsx'
 import { DefaultTheme } from 'styled-components/dist/types'
 import ThemeAlter from './components/themeAlter/themeAlter.tsx'
 import usePersistState from './hooks/usePersistState.ts'
+import About from './pages/about/about.tsx'
 
 function App() {
   const [theme, setTheme] = usePersistState<DefaultTheme>('theme', light)
@@ -23,6 +24,7 @@ function App() {
       <AsideNav />
       <FatherOfAll>
         <Home />
+        <About />
       </FatherOfAll>
     </ThemeProvider>
   )

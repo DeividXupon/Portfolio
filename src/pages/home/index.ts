@@ -48,7 +48,7 @@ export const ContainerTitle = styled(motion.div)`
   background: ${(props) => props.theme.colors.secondary.base};
   border: solid 1px ${(props) => props.theme.colors.accent['100']};
   padding: ${space.x3 + ' ' + space.x6 + ' ' + space.x8 + ' ' + space.x6};
-  border-radius: ${space.x8};
+  border-radius: ${space.x4};
   overflow: hidden;
   transition: 200ms;
 `
@@ -79,24 +79,24 @@ export const ButtonAlter = styled.button`
 `
 
 export const ButtonScroll = styled(motion.button)`
-  display: flex;
-  justify-content: center;
-  gap: ${space.x4};
-  align-items: center;
+  position: relative;
+
   width: ${space.x52};
   height: ${space.x14};
-  border-radius: ${space.x10};
+  margin-top: ${space.x16};
+  margin-bottom: ${space.x32};
+  border-radius: ${space.x4};
   background: ${(props) => props.theme.colors.primary.base};
+
   font-family: ${(props) => props.theme.typography.fontFamily.secondary};
   font-size: ${(props) => props.theme.typography.variants.fontSize.lg_md};
   font-weight: 600;
-  text-align: center;
   color: black;
-  position: relative;
+
   overflow: hidden;
   border: 3px solid ${(props) => props.theme.colors.primary.base};
   transition: 300ms;
-  margin-top: ${space.x16};
+
   cursor: pointer;
 
   &:hover {
@@ -104,9 +104,14 @@ export const ButtonScroll = styled(motion.button)`
     box-shadow:
       0px 0px 15px ${(props) => props.theme.colors.primary.base},
       inset 0px 0px 15px ${(props) => props.theme.colors.primary.base},
-      inset 0px 60px 0px ${(props) => props.theme.colors.primary['200']},
-      inset 0px -60px 0px ${(props) => props.theme.colors.primary['200']},
-      inset 100px 0px 0px ${(props) => props.theme.colors.primary['200']},
-      inset -100px 0px 0px ${(props) => props.theme.colors.primary['200']};
+      inset 210px 0px 0px ${(props) => props.theme.colors.primary['200']};
   }
+`
+export const Lik = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: ${space.x2};
+  text-decoration: none;
+  color: #000;
 `

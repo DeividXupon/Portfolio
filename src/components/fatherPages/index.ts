@@ -17,4 +17,5 @@ export const Father = styled(motion.div)`
   overflow-x: hidden;
   padding-left: ${space.x20};
   transition: background 300ms;
+  scroll-behavior: smooth;
 `

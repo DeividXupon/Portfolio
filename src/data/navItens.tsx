@@ -5,22 +5,26 @@ const NavItens = [
   {
     id: 1,
     Icon: AiOutlineHome,
-    title: 'Home'
+    title: 'Home',
+    href: '#home'
   },
   {
     id: 3,
     Icon: AiOutlineSmile,
-    title: 'Sobre Mim'
+    title: 'Sobre Mim',
+    href: '#sobre'
   },
   {
     id: 4,
     Icon: MdWorkOutline,
-    title: 'Projetos'
+    title: 'Projetos',
+    href: '#projetos'
   },
   {
     id: 2,
     Icon: AiOutlineMessage,
-    title: 'Fale Comigo'
+    title: 'Fale Comigo',
+    href: '#faleComigo'
   }
 ]
 

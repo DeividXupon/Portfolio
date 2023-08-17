@@ -89,7 +89,7 @@ function AsideNav() {
             {(theme) => {
               return NavItens.map((item) => (
                 <LiNav {...LiNavProps(theme)}>
-                  <Ancora>
+                  <Ancora href={item.href}>
                     {item.title} <item.Icon style={stylesIcon}></item.Icon>
                   </Ancora>
                 </LiNav>

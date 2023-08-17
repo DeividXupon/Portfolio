@@ -6,6 +6,8 @@ export const Container = styled.section`
   position: relative;
   display: flex;
   justify-content: center;
+  padding: ${space.x14} 0px ${space.x14} 0px;
+  margin: ${space.x4} 0px ${space.x32} 0px;
 `
 export const Faixa = styled.div`
   top: -${space.x12};

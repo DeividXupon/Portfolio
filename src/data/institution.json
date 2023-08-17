@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Colegio",
+    "institution": "Etec Jardim Ângela",
+    "date": "2018 - 2021",
+    "course": "Ensino médio integrado com técnico em TI",
+    "description":"Descrição do que fiz Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit iste nesciunt aliquid maxime nostrum. Dignissimos doloremque ducimus adipisci pariatur quaerat laboriosam nihil deserunt repudiandae praesentium et, consequatur impedit ex quod!",
+    "ListItems":["bla curso", "curso bla", "bla curso bla"]
+  },
+  {
+    "type": "Faculdade",
+    "institution": "Senac Santo Amaro",
+    "date": "Graduando 2º Semestre",
+    "course": "Analise e Desenvolvimento de Sistemas",
+    "description":"Descrição do que fiz Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit iste nesciunt aliquid maxime nostrum. Dignissimos doloremque ducimus adipisci pariatur quaerat laboriosam nihil deserunt repudiandae praesentium et, consequatur impedit ex quod!",
+    "ListItems":["bla curso", "curso bla", "bla curso bla", "bla curso", "curso bla", "bla curso bla"]
+  },
+  {
+    "type": "Escola Online",
+    "institution": "Alura",
+    "date": "2021 - Presente",
+    "course": "Escola Online de Tecnologia",
+    "description":"Descrição do que fiz Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit iste nesciunt aliquid maxime nostrum. Dignissimos doloremque ducimus adipisci pariatur quaerat laboriosam nihil deserunt repudiandae praesentium et, consequatur impedit ex quod!",
+    "ListItems":["bla curso", "curso bla", "bla curso bla"]
+  }
+]

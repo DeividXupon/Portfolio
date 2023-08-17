@@ -74,7 +74,12 @@ function Home() {
   }
 
   return (
-    <HomeContainer variants={container} initial="hidden" animate="visible">
+    <HomeContainer
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      id="home"
+    >
       <SubTitle variants={itemVar1}>Explorando a Fronteira da Web</SubTitle>
       <ContainerTitle variants={itemVar2}>
         <ThemeConsumer>

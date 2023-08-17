@@ -9,6 +9,7 @@ import { DefaultTheme } from 'styled-components/dist/types'
 import ThemeAlter from './components/themeAlter/themeAlter.tsx'
 import usePersistState from './hooks/usePersistState.ts'
 import About from './pages/about/about.tsx'
+import Studies from './pages/studies/studies.tsx'
 
 function App() {
   const [theme, setTheme] = usePersistState<DefaultTheme>('theme', light)
@@ -25,6 +26,7 @@ function App() {
       <FatherOfAll>
         <Home />
         <About />
+        <Studies />
       </FatherOfAll>
     </ThemeProvider>
   )

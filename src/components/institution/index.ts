@@ -1,19 +1,35 @@
 import styled from 'styled-components'
 import { space } from '../../UI/variaveis'
+import content from '../../data/institution.json'
 
-export const Cont = styled.div<{ $index?: number }>`
+export const Cont = styled.div<{ $index: number }>`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: ${space.container.xcontainer_xl};
-  margin-bottom: ${space.x32};
+  justify-content: center;
+  width: ${space.container.xcontainer_lg};
+  padding: ${space.x16} 0px;
+  margin: auto;
+  border-bottom: ${(p) =>
+    content.length + 1 === p.$index
+      ? ''
+      : '8px ' + p.theme.colors.primary.base};
 
-  ${(p) => (p.$index && p.$index % 2 === 0 ? '&::after' : '&::before')} {
+  ${(p) =>
+    p.$index % 2 === 0
+      ? 'border-left: 8px' + p.theme.colors.primary.base
+      : 'border-right: 8px' + p.theme.colors.primary.base};
+
+  border-style: solid;
+
+  ${(p) => (p.$index && p.$index % 2 === 0 ? '&::before' : '&::after')} {
     ${(p) =>
       p.$index !== undefined
         ? `content: counter(cont);
     counter-increment: cont;
-
+    
+    transform: translate(${
+      p.$index % 2 === 0 ? 'calc(-50% - 4px), 0' : 'calc(50% + 4px)'
+    });
     padding: 10px 30px 10px 30px;
     font-size: 70px;
     background-color: ${p.theme.colors.accent.base};
@@ -24,7 +40,6 @@ export const Cont = styled.div<{ $index?: number }>`
 
 export const StudItem = styled.article`
   outline: 1px solid ${(p) => p.theme.colors.accent[100]};
-  width: ${space.partition['x8/12']};
   padding: ${space.x4};
   border-radius: ${space.x2};
 

@@ -3,12 +3,12 @@ import content from '../../data/institution.json'
 
 interface Iprops {
   content: (typeof content)[0]
-  index?: number
+  index: number
 }
 
 function Institution({ content, index }: Iprops) {
   return (
-    <Cont $index={index && index + 1}>
+    <Cont $index={index + 1}>
       <StudItem>
         <h3>{content.type}</h3>
         <div className="Sco_Dat">

@@ -57,7 +57,7 @@ function About() {
                       height: '180px',
                       x: '0px',
                       y: '0px',
-                      background: theme?.colors.secondary['000'],
+                      background: theme?.colors.background,
                       zIndex: 0
                     }
               }

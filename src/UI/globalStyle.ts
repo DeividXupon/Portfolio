@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1;
     background: ${(props) => props.theme.colors.accent.base};
     color: ${(props) => props.theme.colors.textColor.natural};
+    box-sizing: border-box;
   }
 
 

@@ -3,6 +3,7 @@ import { ContainerSkill, HardSkill, SkillsButtons, SoftSkill } from '.'
 import { Title } from '../../UI/styles'
 import hardSkills from '../../data/hardSkills'
 import softSkills from '../../data/softSkills'
+import { space } from '../../UI/variaveis'
 
 function Skills() {
   const [control, setControl] = useState({ hard: true, soft: false })
@@ -13,7 +14,9 @@ function Skills() {
   }
 
   return (
-    <section style={{ display: 'flex', flexDirection: 'column' }}>
+    <section
+      style={{ display: 'flex', flexDirection: 'column', marginTop: space.x28 }}
+    >
       <Title $fontPrimari>Habilidades</Title>
       <SkillsButtons>
         <button

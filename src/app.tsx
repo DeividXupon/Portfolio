@@ -11,6 +11,8 @@ import usePersistState from './hooks/usePersistState.ts'
 import About from './pages/about/about.tsx'
 import Studies from './pages/studies/studies.tsx'
 import Skills from './pages/skills/skills.tsx'
+import Projects from './pages/projects/projects.tsx'
+import Contact from './pages/contact/contact.tsx'
 
 function App() {
   const [theme, setTheme] = usePersistState<DefaultTheme>('theme', light)
@@ -29,6 +31,8 @@ function App() {
         <About />
         <Studies />
         <Skills />
+        <Projects />
+        <Contact />
       </FatherOfAll>
     </ThemeProvider>
   )

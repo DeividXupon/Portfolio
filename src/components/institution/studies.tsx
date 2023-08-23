@@ -28,8 +28,8 @@ function Institution({ content, index }: Iprops) {
           <div className="listBox">
             <h4>O que aprendi aqui</h4>
             <List>
-              {content.ListItems.map((item) => (
-                <li key={item}>{item}</li>
+              {content.ListItems.map((item, index) => (
+                <li key={index}>{item}</li>
               ))}
             </List>
           </div>

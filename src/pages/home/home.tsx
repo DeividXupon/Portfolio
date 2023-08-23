@@ -43,7 +43,7 @@ function Home() {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 5,
+        delayChildren: 7,
         staggerChildren: 0.3
       }
     }
@@ -147,15 +147,18 @@ function Home() {
                 ) : (
                   <>
                     <AiOutlineLoading3Quarters
-                      size={-10}
+                      size={26}
                       style={{
-                        transition: '1s',
+                        opacity: isAnimating ? 1 : 0,
                         transform: isAnimating
                           ? 'rotate(300deg)'
                           : 'rotate(0deg)'
                       }}
                     />
-                    <BsFillPenFill size={25} style={{ marginTop: '-14' }} />
+                    <BsFillPenFill
+                      size={25}
+                      style={{ transform: 'translate(0%, -100%)' }}
+                    />
                   </>
                 )}
               </ButtonAlter>

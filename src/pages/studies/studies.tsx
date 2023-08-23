@@ -19,7 +19,11 @@ function Studies() {
     >
       <StudiesTitle $fontPrimari>Estudos</StudiesTitle>
       {contentInstitution.map((item, index) => (
-        <Institution content={item} index={index + 1} />
+        <Institution
+          key={item.institution + item.course}
+          content={item}
+          index={index + 1}
+        />
       ))}
     </section>
   )

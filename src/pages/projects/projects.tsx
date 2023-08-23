@@ -33,7 +33,9 @@ function Projects() {
       >
         <h3>
           {stick.map((item, index) => (
-            <Define $index={index}>{item}</Define>
+            <Define key={index} $index={index}>
+              {item}
+            </Define>
           ))}
         </h3>
         <p>

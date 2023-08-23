@@ -8,6 +8,7 @@ import {
   Ancora
 } from './index'
 import { FaLinkedin, FaGithubSquare } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 import { space } from '../../UI/variaveis'
 import IconeLogo from '../../assets/dss.png'
@@ -69,12 +70,13 @@ function AsideNav() {
               animate={{
                 scale: 0.9,
                 y: '0%',
-                borderRadius:
-                  space.x3 + ' ' + space.x3 + ' ' + space.x3 + ' ' + space.x3
+                borderRadius: space.x1
               }}
               transition={{
                 y: {
-                  delay: 3.2
+                  duration: 0.45,
+                  ease: 'linear',
+                  delay: 2.8
                 },
                 delay: 1.9,
                 ease: [0.85, 0, 0.15, 1],
@@ -87,12 +89,18 @@ function AsideNav() {
 
           <ThemeContext.Consumer>
             {(theme) => {
-              return NavItens.map((item) => (
-                <LiNav {...LiNavProps(theme)}>
-                  <Ancora href={item.href}>
-                    {item.title} <item.Icon style={stylesIcon}></item.Icon>
-                  </Ancora>
-                </LiNav>
+              return NavItens.map((item, index) => (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 5 + index / 3, type: 'spring' }}
+                >
+                  <LiNav key={item.id} {...LiNavProps(theme)}>
+                    <Ancora href={item.href}>
+                      {item.title} <item.Icon style={stylesIcon}></item.Icon>
+                    </Ancora>
+                  </LiNav>
+                </motion.div>
               ))
             }}
           </ThemeContext.Consumer>
@@ -102,30 +110,50 @@ function AsideNav() {
             {(theme) => {
               return (
                 <>
-                  <LiNav {...LiNavProps(theme)}>
-                    <Ancora
-                      href="https://www.linkedin.com/in/deividsouzasilva/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaLinkedin
-                        style={{ marginLeft: '12px', ...stylesIcon }}
-                      ></FaLinkedin>{' '}
-                      LINKEDIN
-                    </Ancora>
-                  </LiNav>
-                  <LiNav {...LiNavProps(theme)}>
-                    <Ancora
-                      href="https://github.com/DeividXupon"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithubSquare
-                        style={{ marginLeft: '12px', ...stylesIcon }}
-                      ></FaGithubSquare>{' '}
-                      GITHUB :D
-                    </Ancora>
-                  </LiNav>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 6.3, type: 'spring' }}
+                  >
+                    <LiNav {...LiNavProps(theme)}>
+                      <Ancora
+                        href="https://www.linkedin.com/in/deividsouzasilva/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaLinkedin
+                          style={{
+                            marginLeft: '12px',
+                            ...stylesIcon,
+                            width: space.x9
+                          }}
+                        ></FaLinkedin>
+                        LINKEDIN
+                      </Ancora>
+                    </LiNav>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 6.3, type: 'spring' }}
+                  >
+                    <LiNav {...LiNavProps(theme)}>
+                      <Ancora
+                        href="https://github.com/DeividXupon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithubSquare
+                          style={{
+                            marginLeft: '12px',
+                            ...stylesIcon,
+                            width: space.x9
+                          }}
+                        ></FaGithubSquare>
+                        GITHUB :D
+                      </Ancora>
+                    </LiNav>
+                  </motion.div>
                 </>
               )
             }}

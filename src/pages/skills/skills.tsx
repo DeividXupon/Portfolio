@@ -98,6 +98,7 @@ function Skills() {
               <HardSkill>
                 {hardSkills.map((item) => (
                   <div
+                    key={item.id}
                     onMouseLeave={() => setDescItem('Hover')}
                     onMouseOver={() => setDescItem(item.about)}
                     className="item"
@@ -114,6 +115,7 @@ function Skills() {
               <SoftSkill>
                 {softSkills.map((item) => (
                   <CardSoftSkill
+                    key={item.id}
                     onClick={() => {
                       dialogIsOpen(true)
                       setSelectSoftSkill(item)

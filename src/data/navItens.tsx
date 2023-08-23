@@ -1,27 +1,28 @@
 import { AiOutlineHome, AiOutlineMessage, AiOutlineSmile } from 'react-icons/ai'
 import { MdWorkOutline } from 'react-icons/md'
+import { v4 } from 'uuid'
 
 const NavItens = [
   {
-    id: 1,
+    id: v4(),
     Icon: AiOutlineHome,
     title: 'Home',
     href: '#home'
   },
   {
-    id: 3,
+    id: v4(),
     Icon: AiOutlineSmile,
     title: 'Sobre Mim',
     href: '#sobre'
   },
   {
-    id: 4,
+    id: v4(),
     Icon: MdWorkOutline,
     title: 'Projetos',
     href: '#projetos'
   },
   {
-    id: 2,
+    id: v4(),
     Icon: AiOutlineMessage,
     title: 'Fale Comigo',
     href: '#faleComigo'

@@ -8,7 +8,11 @@ interface Iprops {
 
 function ThemeAlter({ modifyTheme }: Iprops) {
   return (
-    <BoxHeader>
+    <BoxHeader
+      initial={{ opacity: 0, scale: 0, x: '-100%' }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 9, scale: { type: 'spring', damping: 5 } }}
+    >
       <ButtonTheme onClick={modifyTheme}>
         <ThemeConsumer>
           {(theme) =>

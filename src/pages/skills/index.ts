@@ -1,16 +1,19 @@
 import { styled } from 'styled-components'
 import { space } from '../../UI/variaveis'
+import { motion } from 'framer-motion'
 
 export const SkillsButtons = styled.div`
-  width: ${space.container.xcontainer_sm};
+  width: ${space.x96};
   overflow: hidden;
-  border: 2px solid ${(p) => p.theme.colors.accent.base};
-  border-radius: ${space.x2};
+  border: 1px solid ${(p) => p.theme.colors.accent.base};
+  border-bottom: none;
+  border-radius: ${space.x2} ${space.x2} 0px 0px;
   align-self: center;
+  margin: auto;
 
   .hard,
   .soft {
-    height: ${space.x14};
+    height: ${space.x10};
     width: ${space.partition['x1/2']};
     font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
     background-color: ${(p) => p.theme.colors.secondary.base};
@@ -37,25 +40,41 @@ export const SkillsButtons = styled.div`
   }
 `
 
-export const ContainerSkill = styled.div`
+export const ContainerSkill = styled(motion.div)`
+  box-sizing: border-box;
+
+  position: relative;
   width: ${space.container.xcontainer_lg};
   height: 480px;
-  margin-top: ${space.x8};
-  margin-bottom: ${space.x8};
-  padding: ${space.x4};
 
-  border-radius: ${space.x2};
-  border: 1px solid ${(p) => p.theme.colors.accent.base};
+  padding: 0px ${space.x4};
+  margin: auto;
+
+  border-left: 1px solid ${(p) => p.theme.colors.accent.base};
+  border-right: 1px solid ${(p) => p.theme.colors.accent.base};
 
   align-self: center;
   background: ${(p) => p.theme.colors.secondary.base};
+  overflow: hidden;
 
   > h3 {
     font-size: ${(p) => p.theme.typography.variants.fontSize.lg};
     text-align: center;
     font-weight: 400;
-    margin-bottom: ${space.x8};
+    margin: ${space.x4} 0px ${space.x4} 0px;
   }
+`
+
+export const Decorative = styled.div<{ $top?: boolean }>`
+  width: calc(${space.container.xcontainer_lg} - 2px);
+  height: 20px;
+  background: ${(p) => p.theme.colors.background};
+  margin: auto;
+  border: 1px solid ${(p) => p.theme.colors.accent.base};
+  border-radius: ${(p) =>
+    p.$top
+      ? `${space.x2} ${space.x2} 0px 0px`
+      : `0px 0px ${space.x2} ${space.x2}`};
 `
 
 export const HardSkill = styled.div`
@@ -104,44 +123,51 @@ export const HardSkill = styled.div`
 export const SoftSkill = styled.div`
   display: flex;
   justify-content: space-between;
+`
 
-  .item {
-    border: 1px solid ${(p) => p.theme.colors.accent.base};
-    border-radius: ${space.x2};
-    padding: ${space.x2};
-    background: ${(p) => p.theme.colors.background};
-    width: 230px;
-    display: flex;
-    flex-direction: column;
+export const Dia = styled.dialog`
+  border: none;
+  padding: 30px;
+  border-radius: ${space.x2};
+  border: 1px solid ${(p) => p.theme.colors.accent.base};
+  background: ${(p) => p.theme.colors.secondary['050']};
 
-    > h3 {
-      font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
-      text-align: center;
-    }
+  &:focus {
+    outline: none;
+  }
 
-    > div {
-      width: 100%;
-      height: 150px;
-      margin: ${space.x4} 0px;
-    }
+  &::backdrop {
+    backdrop-filter: blur(5px);
+  }
 
-    > p {
-      display: flex;
-      align-items: center;
-      height: 170px;
-      text-align: center;
-    }
+  > button {
+    transform: translate(50%, 0%);
+    width: 50%;
+    font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
+    text-align: center;
+    border-radius: ${space.x1};
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
 
     &:hover {
-      box-shadow:
-        0px 0px 10px ${(p) => p.theme.colors.primary.base},
-        inset 0px 0px 10px ${(p) => p.theme.colors.primary.base};
+      background: #ff1b1b;
+    }
+  }
 
-      border: 1px solid ${(p) => p.theme.colors.primary.base};
-
-      > div {
-        color: ${(p) => p.theme.colors.primary.base};
-      }
+  > div {
+    display: flex;
+    > p {
+      display: inline;
+      width: 200px;
+      background-color: red;
+      align-self: center;
+      border-radius: 0px ${space.x2} ${space.x2} 0px;
+      border: 1px solid ${(p) => p.theme.colors.accent.base};
+      border-left: none;
+      padding: 10px;
+      background-color: ${(p) => (p.theme.title === 'dark' ? '#000' : '#fff')};
+      color: ${(p) => p.theme.colors.textColor.bright};
     }
   }
 `

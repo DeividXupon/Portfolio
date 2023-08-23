@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { space } from '../../UI/variaveis'
+import { motion } from 'framer-motion'
 
-export const Box = styled.article<{ $reverse?: boolean }>`
+export const Box = styled(motion.article)<{ $reverse?: boolean }>`
   display: flex;
   flex-direction: ${(p) => p.$reverse && 'row-reverse'};
   width: ${space.container.xcontainer_lg};
@@ -30,26 +31,23 @@ export const BoxTextProject = styled.div`
   > h3 {
     font-size: ${(p) => p.theme.typography.variants.fontSize.xxl};
   }
+`
 
-  > p {
-  }
+export const Link = styled(motion.a)`
+  width: 55%;
+  height: 40px;
+  border: 1px solid ${(p) => p.theme.colors.accent.base};
+  border-radius: ${space.x2};
+  background: ${(p) => p.theme.colors.secondary.base};
 
-  > a {
-    width: 70%;
-    height: 30px;
-    border: 1px solid ${(p) => p.theme.colors.accent.base};
-    border-radius: ${space.x2};
-    background: ${(p) => p.theme.colors.secondary.base};
+  text-align: center;
+  text-decoration: none;
+  color: ${(p) => p.theme.colors.primary.base};
+  font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
 
-    text-align: center;
-    text-decoration: none;
-    color: ${(p) => p.theme.colors.primary.base};
-    font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
-
-    line-height: 25px;
-    margin-bottom: -20px;
-    align-self: center;
-  }
+  line-height: 40px;
+  margin-bottom: -30px;
+  align-self: center;
 `
 
 export const SkeletonMoba = styled.div`

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { space } from '../../UI/variaveis'
 import content from '../../data/institution.json'
+import { motion } from 'framer-motion'
 
 export const Cont = styled.div<{ $index: number }>`
   display: flex;
@@ -38,7 +39,7 @@ export const Cont = styled.div<{ $index: number }>`
   }
 `
 
-export const StudItem = styled.article`
+export const StudItem = styled(motion.article)`
   outline: 1px solid ${(p) => p.theme.colors.accent[100]};
   padding: ${space.x4};
   border-radius: ${space.x2};

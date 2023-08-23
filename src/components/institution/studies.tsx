@@ -9,7 +9,11 @@ interface Iprops {
 function Institution({ content, index }: Iprops) {
   return (
     <Cont $index={index + 1}>
-      <StudItem>
+      <StudItem
+        initial={{ opacity: 0, x: -60 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+      >
         <h3>{content.type}</h3>
         <div className="Sco_Dat">
           <h4>

@@ -3,7 +3,8 @@ import {
   SkeletonMoba,
   SkeletonNot,
   Box,
-  BoxTextProject
+  BoxTextProject,
+  Link
 } from '.'
 
 interface Iprops {
@@ -16,12 +17,23 @@ interface Iprops {
 
 function Project({ mobaImg, notImg, $reverse, children, link }: Iprops) {
   return (
-    <Box $reverse={$reverse}>
+    <Box
+      initial={{ opacity: 0, y: -100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.6, duration: 1 }}
+      viewport={{ once: true, amount: 0.8 }}
+      $reverse={$reverse}
+    >
       <BoxTextProject>
         {children}
-        <a className="link" href={link} target="_blank">
-          acesse
-        </a>
+        <Link
+          whileHover={{ scale: 1.25, boxShadow: '0px 0px 30px black' }}
+          transition={{ type: 'spring', stiffness: 100, damping: 8 }}
+          href={link}
+          target="_blank"
+        >
+          Acesse
+        </Link>
       </BoxTextProject>
       <BoxImgsProject>
         <SkeletonMoba className="moba">

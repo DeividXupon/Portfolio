@@ -34,23 +34,27 @@ export const BoxMain = styled.div`
   .contat {
     width: 45%;
     border-right: 2px solid;
-    > h3 {
-      font-size: ${(p) => p.theme.typography.variants.fontSize.lg};
-      font-weight: 400;
-      padding: ${space.x2} ${space.x4} 0px ${space.x4};
-    }
-    > p {
-      padding: ${space.x1} ${space.x4};
-    }
-    > ul {
-      display: flex;
-      border-bottom: 2px solid;
-      padding: ${space.x1} ${space.x8};
-      justify-content: space-between;
-      box-sizing: border-box;
-      font-size: ${(p) => p.theme.typography.variants.fontSize.xs};
-      > li {
-        list-style: circle;
+
+    .faleCom {
+      height: 25%;
+      > h3 {
+        font-size: ${(p) => p.theme.typography.variants.fontSize.lg};
+        font-weight: 400;
+        padding: ${space.x2} ${space.x4} 0px ${space.x4};
+      }
+      > p {
+        padding: ${space.x1} ${space.x4};
+      }
+      > ul {
+        display: flex;
+        border-bottom: 2px solid;
+        padding: ${space.x1} ${space.x8};
+        justify-content: space-between;
+        box-sizing: border-box;
+        font-size: ${(p) => p.theme.typography.variants.fontSize.xs};
+        > li {
+          list-style: circle;
+        }
       }
     }
   }
@@ -60,6 +64,8 @@ export const BoxMain = styled.div`
   }
 `
 export const Locat = styled.div`
+  height: 30%;
+  border-bottom: 2px solid;
   > h4 {
     padding: 0px ${space.x4};
     font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
@@ -76,7 +82,6 @@ export const Locat = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    border-bottom: 2px solid;
 
     > div {
       > label {
@@ -91,7 +96,8 @@ export const Locat = styled.div`
 `
 
 export const Map = styled.div`
-  height: 180px;
+  overflow: hidden;
+  height: 45%;
 `
 export const Gmail = styled.div`
   box-sizing: border-box;

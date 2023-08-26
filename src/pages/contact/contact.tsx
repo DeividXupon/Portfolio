@@ -7,6 +7,7 @@ import {
   Map,
   Gmail
 } from '.'
+import MapGoogle from '../../components/googleMaps/mapGoogle'
 
 function Contact() {
   return (
@@ -16,28 +17,31 @@ function Contact() {
         <hr />
         <BoxMain>
           <div className="contat">
-            <h3>Fale Comigo</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum
-              dolor sit amet consectetur adipisicing
-            </p>
-            <ul>
-              <li>
-                Email:{' '}
-                <a href="mailto:deivid.silva.info@gmail.com">
-                  deivid.silva.info@gmail.com
-                </a>
-              </li>
-              <li>
-                Cel:{' '}
-                <a
-                  href="https://web.whatsapp.com/send?phone=5511952737346"
-                  target="_blank"
-                >
-                  11 95273-7346
-                </a>
-              </li>
-            </ul>
+            <div className="faleCom">
+              <h3>Fale Comigo</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum
+                dolor sit amet consectetur adipisicing
+              </p>
+              <ul>
+                <li>
+                  Email:{' '}
+                  <a href="mailto:deivid.silva.info@gmail.com">
+                    deivid.silva.info@gmail.com
+                  </a>
+                </li>
+                <li>
+                  Cel:{' '}
+                  <a
+                    href="https://web.whatsapp.com/send?phone=5511952737346"
+                    target="_blank"
+                  >
+                    11 95273-7346
+                  </a>
+                </li>
+              </ul>
+            </div>
+
             <Locat>
               <h4>Localização</h4>
               <div className="grid-locDados">
@@ -58,8 +62,10 @@ function Contact() {
                   <p>São Paulo</p>
                 </div>
               </div>
-              <Map></Map>
             </Locat>
+            <Map>
+              <MapGoogle />
+            </Map>
           </div>
           <Gmail>
             <h3>Mande uma mensagem</h3>

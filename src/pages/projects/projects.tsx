@@ -13,7 +13,7 @@ import { space } from '../../UI/variaveis'
 import { Define } from '.'
 
 function Projects() {
-  const stick = ['S', 'T', 'I', 'C', 'K']
+  const stick = ['S', 'T', 'I', 'C', 'K', 'Y']
 
   return (
     <section
@@ -39,7 +39,7 @@ function Projects() {
           ))}
         </h3>
         <p>
-          O Stick é um aplicativo para fazer anotações e relembrar coisas. Ele
+          O Sticky é um aplicativo para fazer anotações e relembrar coisas. Ele
           guarda as suas anotações e lembretes diretamente no seu navegador, no
           seu próprio espaço de armazenamento. Esse app é super colorido e cheio
           de animações legais, o que deixa ele cheio de detalhes interessantes e

@@ -10,6 +10,7 @@ import {
 } from '.'
 
 import contentItemsModal from '../../data/contentItemsModal.json'
+import cv from '../../assets/DEIVID_DE_SOUZA.pdf'
 
 import { PiDogFill } from 'react-icons/pi'
 import { IoLogoGameControllerA } from 'react-icons/io'
@@ -48,7 +49,7 @@ function About() {
                       width: '2px',
                       height: '0px',
                       x: '166px',
-                      y: '220px',
+                      y: '240px',
                       zIndex: -1,
                       background: theme?.colors.primary.base
                     }
@@ -97,13 +98,15 @@ function About() {
             <h2>Deivid Silva</h2>
             <h4>Creative Front-end Developer 🧑‍💻</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-              distinctio asperiores laboriosam nisi ex sed voluptatibus! Odio,
-              iure vero ad assumenda obcaecati saepe maxime soluta, quod ullam
-              sit facilis corporis. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Est distinctio asperiores laboriosam nisi ex sed
-              voluptatibus! Odio, iure vero ad assumenda obcaecati saepe maxime
-              soluta, quod ullam sit facilis corporis.
+              Me chamo Deivid, tenho 20 anos e sou uma pessoa apaixonada por
+              tecnologia. Descobri a programação aos meus 13 anos, fazendo jogos
+              no Roblox Studio e criando servidores de minigames do Minecraft.
+              Comecei a estudar de verdade aos 15 anos, quando entrei em uma
+              escola técnica de informática na ETEC Jardim Ângela. Na época, era
+              uma das ETECs mais disputadas. Foi lá que começou minha paixão
+              pela programação. Estudei um pouco de cada área, como
+              desenvolvimento web, criação de banco de dados, back-end, análise
+              de dados e criação de projetos.
             </p>
           </TextConteiner>
 
@@ -116,7 +119,9 @@ function About() {
               ))}
             </ul>
 
-            <button> RESUMO </button>
+            <a href={cv} download>
+              Download CV
+            </a>
           </ContainerAboutButtons>
         </div>
       </BoxContent>

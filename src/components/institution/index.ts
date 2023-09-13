@@ -50,7 +50,7 @@ export const StudItem = styled(motion.article)`
   }
 
   > h2 {
-    margin-top: ${space.x2};
+    margin-top: ${space.x4};
     font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
     color: ${(p) => p.theme.colors.textColor.bright};
     text-align: center;
@@ -86,6 +86,7 @@ export const Description = styled.div`
 
     > h4 {
       text-align: center;
+      margin-bottom: 6px;
     }
   }
 `
@@ -96,14 +97,22 @@ export const LineMatte = styled.hr`
   border-radius: 25%;
   background: ${(p) => p.theme.colors.primary[200]};
   border: none;
-  margin-top: ${space.x2};
-  margin-bottom: ${space.x4};
+  margin-top: ${space.x1};
+  margin-bottom: ${space.x2};
 `
 export const List = styled.ul`
+  overflow-y: scroll;
+  height: 150px;
   list-style: none;
   counter-reset: contador;
+  font-size: 0.8em;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
 
   > li {
+    margin-bottom: 4px;
     &::before {
       content: counter(contador) '.';
       counter-increment: contador;

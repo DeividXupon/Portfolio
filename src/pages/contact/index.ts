@@ -34,6 +34,7 @@ export const BoxMain = styled.div`
   .contat {
     width: 45%;
     border-right: 2px solid;
+    overflow: hidden;
 
     .faleCom {
       height: 25%;
@@ -97,6 +98,7 @@ export const Locat = styled.div`
 
 export const Map = styled.div`
   overflow: hidden;
+  border-radius: 0px 0px 0px ${space['x2.5']};
   height: 45%;
 `
 export const Gmail = styled.div`

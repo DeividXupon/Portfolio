@@ -11,6 +11,7 @@ export const CardBox = styled.div`
   display: flex;
   flex-direction: column;
   color: ${(p) => p.theme.colors.textColor.natural};
+  cursor: pointer;
 
   > h3 {
     font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};

@@ -169,10 +169,10 @@ function Home() {
       <Intro variants={itemVar1}>
         Primeiramente, seja <em>bem-vindo</em> ao meu portfólio. Agradeço por
         visitar. Uma sinergia perfeita entre a arte do <em>Design</em>, a
-        maestria do Desenvolvimento <em>FrontEnd</em> e habilidades
-        profissionais excepcionais é o que verdadeiramente <em>elevará</em> o
-        seu produto a um patamar destacado no mercado. É exatamente isso que
-        estou <em>oferecendo a você</em>. E então, que tal trabalharmos juntos?
+        maestria do Desenvolvimento <em>FrontEnd</em> e habilidades excepcionais
+        é o que verdadeiramente <em>elevará</em> o seu produto a um patamar
+        destacado no mercado. É exatamente isso que estou
+        <em>oferecendo a você</em>. E então, que tal trabalharmos juntos?
       </Intro>
       <ButtonScroll variants={itemVar2}>
         <Lik href="#sobre">

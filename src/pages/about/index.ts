@@ -52,14 +52,13 @@ export const ModalHover = styled(motion.div)<{ $item: number; $exit: number }>`
   overflow: hidden;
 
   > h5 {
-    font-size: ${(p) => p.theme.typography.variants.fontSize.lg};
+    font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: ${space.x5};
+    margin-bottom: ${space.x2};
   }
 
   > p {
     min-width: 334px;
-    font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
   }
 `
 
@@ -110,15 +109,25 @@ export const ContainerAboutButtons = styled.div`
     gap: ${space.x2};
   }
 
-  > button {
+  > a {
+    text-align: center;
+    line-height: ${space.x14};
     width: ${space.x48};
     height: ${space.x14};
     border-radius: ${space.x2};
-
-    font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
+    text-decoration: none;
+    color: #000;
+    font-size: 1.4em;
 
     background: ${(p) => p.theme.colors.primary[150]};
     border: 1px solid ${(p) => p.theme.colors.accent.base};
+
+    cursor: pointer;
+
+    transition: 250ms;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `
 export const Modal = styled.li`

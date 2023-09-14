@@ -39,12 +39,13 @@ export const BoxMain = styled.div`
     .faleCom {
       height: 25%;
       > h3 {
-        font-size: ${(p) => p.theme.typography.variants.fontSize.lg};
+        font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
         font-weight: 400;
         padding: ${space.x2} ${space.x4} 0px ${space.x4};
       }
       > p {
         padding: ${space.x1} ${space.x4};
+        font-size: ${(p) => p.theme.typography.variants.fontSize.sm};
       }
       > ul {
         display: flex;
@@ -52,7 +53,7 @@ export const BoxMain = styled.div`
         padding: ${space.x1} ${space.x8};
         justify-content: space-between;
         box-sizing: border-box;
-        font-size: ${(p) => p.theme.typography.variants.fontSize.xs};
+        font-size: ${(p) => p.theme.typography.variants.fontSize.sm};
         > li {
           list-style: circle;
         }
@@ -70,9 +71,8 @@ export const Locat = styled.div`
   > h4 {
     padding: 0px ${space.x4};
     font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
-    color: ${(p) => (p.theme.title === 'dark' ? '#000' : '#fff')};
-    font-weight: 300;
-    background-color: ${(p) => (p.theme.title === 'dark' ? '#fff' : '#000')};
+    color: ${(p) => (p.theme.title === 'dark' ? '#fff' : '#000')};
+    font-weight: 400;
     width: 100px;
   }
 

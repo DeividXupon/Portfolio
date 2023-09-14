@@ -20,8 +20,9 @@ function Contact() {
             <div className="faleCom">
               <h3>Fale Comigo</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum
-                dolor sit amet consectetur adipisicing
+                Basta fornecer seu e-mail corretamente para que eu possa
+                responder, ou se preferir, pode me contatar pelo WhatsApp ou
+                através do meu e-mail profissional.
               </p>
               <ul>
                 <li>

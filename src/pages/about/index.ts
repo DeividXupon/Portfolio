@@ -33,6 +33,18 @@ export const BoxContent = styled.div`
   > div {
     align-self: center;
   }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: ${space.container.xcontainer_md};
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    width: ${space.container.xcontainer_sm};
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: ${space.container.xcontainer_xs};
+  }
 `
 
 export const ModalHover = styled(motion.div)<{ $item: number; $exit: number }>`
@@ -60,6 +72,20 @@ export const ModalHover = styled(motion.div)<{ $item: number; $exit: number }>`
   > p {
     min-width: 334px;
   }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    left: calc(-4% + ${(props) => 7.5 * props.$item + '%'}); //7.5
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    left: calc(-12% + ${(props) => 7.5 * props.$item + '%'}); //7.5
+    padding: 5px;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    left: 13%; //7.5
+    padding: 3px;
+  }
 `
 
 export const MySelf = styled.div`
@@ -67,6 +93,10 @@ export const MySelf = styled.div`
     width: calc(${space.x80} + ${space.x6});
     height: calc(${space.x80} + ${space.x6});
     border-radius: ${space.x2};
+  }
+
+  @media (max-width: 1199px) {
+    display: none;
   }
 `
 
@@ -95,8 +125,25 @@ export const TextConteiner = styled.div`
   }
 
   > p {
+    font-size: ${(p) => p.theme.typography.variants.fontSize.md};
     width: ${space.container.xcontainer_sm};
     margin-bottom: ${space.x8};
+  }
+
+  @media (max-width: 1199px) {
+    > p {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    > h4 {
+      display: none;
+    }
+
+    > p {
+      font-size: ${(p) => p.theme.typography.variants.fontSize.sm};
+    }
   }
 `
 
@@ -128,6 +175,16 @@ export const ContainerAboutButtons = styled.div`
     &:hover {
       transform: scale(1.1);
     }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
   }
 `
 export const Modal = styled.li`

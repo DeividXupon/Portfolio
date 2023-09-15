@@ -57,8 +57,31 @@ function AsideNav() {
       transition={{ delay: 4, ease: 'easeInOut', duration: 1 }}
     >
       <LeftMenuNav
-        animate={{ height: '100vh' }}
-        transition={{ delay: 2.4, ease: [0.87, 0, 0.13, 1], duration: 1.5 }}
+        animate={
+          window.innerWidth >= 500
+            ? { height: '100vh' }
+            : { height: '100vh', display: 'none' }
+        }
+        transition={
+          window.innerWidth >= 500
+            ? {
+                height: {
+                  delay: 2.4,
+                  ease: [0.87, 0, 0.13, 1],
+                  duration: 1.5
+                }
+              }
+            : {
+                height: {
+                  delay: 2.4,
+                  ease: [0.87, 0, 0.13, 1],
+                  duration: 1.5
+                },
+                display: {
+                  delay: 3
+                }
+              }
+        }
       >
         <BoxItensNav>
           <LiNav>

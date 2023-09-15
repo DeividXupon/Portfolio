@@ -18,4 +18,8 @@ export const Father = styled(motion.div)`
   padding-left: ${space.x20};
   transition: background 300ms;
   scroll-behavior: smooth;
+
+  @media (max-width: 500px) {
+    padding-left: 0px;
+  }
 `

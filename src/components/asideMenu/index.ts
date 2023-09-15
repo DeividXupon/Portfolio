@@ -23,6 +23,10 @@ export const LeftMenuNav = styled(motion.nav)`
   top: 50%;
   border-right: solid 1px ${(props) => props.theme.colors.accent['100']};
   transition: background 600ms;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `
 
 export const Logo = styled(motion.img)`

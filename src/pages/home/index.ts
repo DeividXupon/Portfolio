@@ -7,7 +7,7 @@ export const HomeContainer = styled(motion.main)`
   padding-top: ${space.x8};
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; //992 1199
 `
 export const MainTitle = styled.h1`
   font-family: ${(props) => props.theme.typography.fontFamily.primary};
@@ -16,6 +16,17 @@ export const MainTitle = styled.h1`
   line-height: ${space.x16};
   transition: 400ms;
   text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  @media (max-width: 991px) {
+    font-size: ${(props) => props.theme.typography.variants.fontSize.xl};
+  }
+
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.theme.typography.variants.fontSize.lg};
+    line-height: ${space.x10};
+  }
 `
 
 export const SubTitle = styled(motion.h2)`
@@ -26,6 +37,15 @@ export const SubTitle = styled(motion.h2)`
   width: ${space.container.xcontainer_md};
   transition: 400ms;
   text-align: center;
+
+  @media (max-width: 991px) {
+    font-size: ${(props) => props.theme.typography.variants.fontSize.lg};
+  }
+
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.theme.typography.variants.fontSize.lg_md};
+    margin-bottom: ${space.x6};
+  }
 `
 export const Intro = styled(motion.p)`
   font-size: ${(props) => props.theme.typography.variants.fontSize.lg_md};
@@ -41,8 +61,23 @@ export const Intro = styled(motion.p)`
         ? props.theme.colors.primary.base
         : props.theme.colors.primary[400]};
   }
+
+  @media (max-width: 991px) {
+    font-size: ${(props) => props.theme.typography.variants.fontSize.md};
+  }
+
+  @media (max-width: 768px) {
+    width: ${space.container.xcontainer_xs};
+    margin-top: ${space.x10};
+  }
+
+  @media (max-width: 480px) {
+    width: 300px;
+    text-align: center;
+  }
 `
 export const ContainerTitle = styled(motion.div)`
+  display: flex;
   position: relative;
   width: ${space.container.xcontainer_md};
   background: ${(props) => props.theme.colors.secondary.base};
@@ -51,6 +86,31 @@ export const ContainerTitle = styled(motion.div)`
   border-radius: ${space.x4};
   overflow: hidden;
   transition: 200ms;
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: ${space.container.xcontainer_sm};
+  }
+
+  @media (max-width: 768px) {
+    width: 270px;
+    height: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 480px) {
+    width: 250px;
+    padding: ${space['x1.5'] +
+    ' ' +
+    space.x3 +
+    ' ' +
+    space.x4 +
+    ' ' +
+    space.x3};
+    height: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 `
 export const ButtonAlter = styled.button`
   left: 100%;

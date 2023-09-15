@@ -42,8 +42,10 @@ export const BoxContent = styled.div`
     width: ${space.container.xcontainer_sm};
   }
 
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     width: ${space.container.xcontainer_xs};
+    margin-left: ${space.x2};
+    margin-right: ${space.x2};
   }
 `
 
@@ -70,7 +72,8 @@ export const ModalHover = styled(motion.div)<{ $item: number; $exit: number }>`
   }
 
   > p {
-    min-width: 334px;
+    font-size: ${(p) => p.theme.typography.variants.fontSize.md};
+    width: 100%;
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {
@@ -82,9 +85,18 @@ export const ModalHover = styled(motion.div)<{ $item: number; $exit: number }>`
     padding: 5px;
   }
 
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     left: 13%; //7.5
     padding: 3px;
+  }
+
+  @media (max-width: 400px) {
+    left: 1%;
+    max-width: 280px;
+
+    > p {
+      font-size: ${(p) => p.theme.typography.variants.fontSize.sm};
+    }
   }
 `
 
@@ -143,6 +155,16 @@ export const TextConteiner = styled.div`
 
     > p {
       font-size: ${(p) => p.theme.typography.variants.fontSize.sm};
+    }
+  }
+
+  @media (max-width: 480px) {
+    > h3 {
+      font-size: ${(p) => p.theme.typography.variants.fontSize.md};
+    }
+
+    > h2 {
+      font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
     }
   }
 `

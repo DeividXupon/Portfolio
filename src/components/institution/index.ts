@@ -37,6 +37,44 @@ export const Cont = styled.div<{ $index: number }>`
     border-radius: ${space.x2};`
         : ''}
   }
+
+  @media (max-width: 1199px) {
+    box-sizing: border-box;
+    flex-direction: column;
+    width: ${space.container.xcontainer_md};
+    padding: ${space.x16};
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    width: ${space.container.xcontainer_sm};
+  }
+
+  @media (max-width: 767px) {
+    width: ${space.container.xcontainer_xs};
+    padding: ${space.x14};
+
+    border-bottom: ${(p) =>
+      content.length + 1 === p.$index
+        ? ''
+        : '4px ' + p.theme.colors.primary.base};
+
+    ${(p) =>
+      p.$index % 2 === 0
+        ? 'border-left: 4px' + p.theme.colors.primary.base
+        : 'border-right: 4px' + p.theme.colors.primary.base};
+
+    border-style: solid;
+  }
+
+  @media (max-width: 480px) {
+    width: 320px;
+    padding: ${space.x4};
+  }
 `
 
 export const StudItem = styled(motion.article)`
@@ -75,18 +113,45 @@ export const Description = styled.div`
   display: flex;
 
   > p {
+    font-size: ${(p) => p.theme.typography.variants.fontSize.md};
     width: ${space.partition['x3/4']};
     padding-right: ${space.x4};
     align-self: center;
   }
   .listBox {
-    display: flex;
-    flex-direction: column;
     width: ${space.partition['x1/4']};
 
     > h4 {
+      font-size: ${(p) => p.theme.typography.variants.fontSize.md};
       text-align: center;
       margin-bottom: 6px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+
+    > p {
+      width: 100%;
+      padding: ${space.x2};
+      padding-bottom: ${space.x4};
+    }
+
+    .listBox {
+      align-self: center;
+      width: ${space.partition['x3/4']};
+
+      > h4 {
+        font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .listBox {
+      padding: ${space.x2};
+      width: 100%;
     }
   }
 `

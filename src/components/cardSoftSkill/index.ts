@@ -7,7 +7,7 @@ export const CardBox = styled.div`
   border-radius: ${space.x2};
   padding: ${space.x2};
   background: ${(p) => p.theme.colors.background};
-  width: 230px;
+  width: 240px;
   display: flex;
   flex-direction: column;
   color: ${(p) => p.theme.colors.textColor.natural};
@@ -41,5 +41,9 @@ export const CardBox = styled.div`
     > div {
       color: ${(p) => p.theme.colors.primary.base};
     }
+  }
+
+  @media (max-width: 1199px) {
+    width: 280px;
   }
 `

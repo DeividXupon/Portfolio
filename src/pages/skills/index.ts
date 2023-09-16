@@ -38,6 +38,15 @@ export const SkillsButtons = styled.div`
   .soft {
     border-left: 1px solid ${(p) => p.theme.colors.accent.base};
   }
+
+  @media (max-width: 480px) {
+    width: ${space.x48};
+
+    .hard,
+    .soft {
+      font-size: ${(p) => p.theme.typography.variants.fontSize.md};
+    }
+  }
 `
 
 export const ContainerSkill = styled(motion.div)`
@@ -63,6 +72,24 @@ export const ContainerSkill = styled(motion.div)`
     font-weight: 400;
     margin: ${space.x4} 0px ${space.x4} 0px;
   }
+
+  @media (max-width: 1199px) {
+    overflow-y: scroll;
+    width: ${space.container.xcontainer_md};
+  }
+
+  @media (max-width: 991px) {
+    width: ${space.container.xcontainer_sm};
+    padding: 0px;
+  }
+
+  @media (max-width: 767px) {
+    width: ${space.container.xcontainer_xs};
+  }
+
+  @media (max-width: 480px) {
+    width: 320px;
+  }
 `
 
 export const Decorative = styled.div<{ $top?: boolean }>`
@@ -75,6 +102,23 @@ export const Decorative = styled.div<{ $top?: boolean }>`
     p.$top
       ? `${space.x2} ${space.x2} 0px 0px`
       : `0px 0px ${space.x2} ${space.x2}`};
+
+  @media (max-width: 1199px) {
+    box-sizing: border-box;
+    width: ${space.container.xcontainer_md};
+  }
+
+  @media (max-width: 991px) {
+    width: ${space.container.xcontainer_sm};
+  }
+
+  @media (max-width: 767px) {
+    width: ${space.container.xcontainer_xs};
+  }
+
+  @media (max-width: 480px) {
+    width: 320px;
+  }
 `
 
 export const HardSkill = styled.div`
@@ -107,6 +151,7 @@ export const HardSkill = styled.div`
   }
 
   .description {
+    font-size: ${(p) => p.theme.typography.variants.fontSize.md};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,11 +163,72 @@ export const HardSkill = styled.div`
     height: 80px;
     margin-top: ${space.x3};
   }
+
+  @media (max-width: 1199px) {
+    gap: 15px 10px;
+
+    .item {
+      height: 120px;
+      width: 120px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    gap: 15px 5px;
+
+    .item {
+      height: 100px;
+      width: 100px;
+    }
+
+    .description {
+      height: 100px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    gap: 5px 5px;
+
+    .item {
+      height: 60px;
+      width: 80px;
+    }
+
+    .description {
+      height: 160px;
+      font-size: ${(p) => p.theme.typography.variants.fontSize.sm};
+    }
+  }
+
+  @media (max-width: 480px) {
+    gap: 5px 5px;
+    padding: 5px;
+
+    .item {
+      height: 50px;
+      width: 60px;
+    }
+
+    .description {
+    }
+  }
 `
 
 export const SoftSkill = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1199px) {
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
 `
 
 export const Dia = styled.dialog`

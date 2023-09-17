@@ -15,7 +15,9 @@ import CardSoftSkill from '../../components/cardSoftSkill/CardSoftSkill'
 
 function Skills() {
   const [control, setControl] = useState({ hard: true, soft: false })
-  const [descItem, setDescItem] = useState('Passe o mouse por cima das caixas')
+  const [descItem, setDescItem] = useState(
+    'Encoste em alguma das caixas a cima'
+  )
 
   const [ativeAnimet, setAtiveAnimet] = useState(false)
 
@@ -86,9 +88,11 @@ function Skills() {
           animate={ativeAnimet ? 'hidden' : 'visible'}
         >
           <Dia ref={refDialog}>
-            <button onClick={() => dialogIsOpen(false)}>Esc / Fechar</button>
+            <button onClick={() => dialogIsOpen(false)}>X</button>
             <div>
-              <CardSoftSkill item={selectSoftSkill} />
+              <div className="boxCard">
+                <CardSoftSkill item={selectSoftSkill} />
+              </div>
               <p>{selectSoftSkill.motivo}</p>
             </div>
           </Dia>
@@ -100,7 +104,7 @@ function Skills() {
                   <div
                     key={item.id}
                     onMouseLeave={() =>
-                      setDescItem('Passe o mouse por cima das caixas')
+                      setDescItem('Encoste em alguma das caixas a cima')
                     }
                     onMouseOver={() => setDescItem(item.about)}
                     className="item"

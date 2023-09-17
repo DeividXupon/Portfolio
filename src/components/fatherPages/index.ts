@@ -19,7 +19,7 @@ export const Father = styled(motion.div)`
   transition: background 300ms;
   scroll-behavior: smooth;
 
-  @media (max-width: 700px) {
+  @media (max-width: 700px) or (max-height: 480px) {
     padding-left: 0px;
   }
 `

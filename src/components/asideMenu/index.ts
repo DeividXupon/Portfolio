@@ -24,7 +24,7 @@ export const LeftMenuNav = styled(motion.nav)`
   border-right: solid 1px ${(props) => props.theme.colors.accent['100']};
   transition: background 600ms;
 
-  @media (max-width: 700px) {
+  @media (max-width: 700px) or (max-height: 480px) {
     display: none;
   }
 `

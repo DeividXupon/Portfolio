@@ -247,8 +247,10 @@ export const Dia = styled.dialog`
   }
 
   > button {
-    transform: translate(50%, 0%);
-    width: 50%;
+    position: relative;
+    left: calc(100% - 50px);
+    width: 40px;
+    height: 40px;
     font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
     text-align: center;
     border-radius: ${space.x1};
@@ -274,6 +276,20 @@ export const Dia = styled.dialog`
       padding: 10px;
       background-color: ${(p) => (p.theme.title === 'dark' ? '#000' : '#fff')};
       color: ${(p) => p.theme.colors.textColor.bright};
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 10px;
+    > div {
+      .boxCard {
+        display: none;
+      }
+
+      > p {
+        border: 1px solid ${(p) => p.theme.colors.accent.base};
+        border-radius: ${space.x2};
+      }
     }
   }
 `

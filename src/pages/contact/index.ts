@@ -26,6 +26,23 @@ export const Addres = styled.address`
     margin: 0;
     border: 1px solid;
   }
+
+  @media (max-width: 1199px) {
+    width: ${space.container.xcontainer_md};
+  }
+
+  @media (max-width: 992px) {
+    width: ${space.container.xcontainer_sm};
+  }
+
+  @media (max-width: 767px) {
+    width: ${space.container.xcontainer_xs};
+  }
+
+  @media (max-width: 480px) {
+    box-sizing: border-box;
+    width: 300px;
+  }
 `
 export const BoxMain = styled.div`
   display: flex;
@@ -64,6 +81,30 @@ export const BoxMain = styled.div`
     border: 1px solid;
     margin: 0;
   }
+
+  @media (max-width: 1199px) {
+    .contat {
+      width: 55%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+
+    .contat {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contat {
+      .faleCom {
+        > ul {
+          flex-direction: column;
+        }
+      }
+    }
+  }
 `
 export const Locat = styled.div`
   height: 30%;
@@ -92,6 +133,12 @@ export const Locat = styled.div`
       > p {
         font-weight: 600;
       }
+    }
+  }
+
+  @media (max-width: 767px) {
+    > h4 {
+      display: none;
     }
   }
 `
@@ -165,5 +212,31 @@ export const Gmail = styled.div`
     &:hover {
       background: ${(p) => p.theme.colors.primary.base};
     }
+  }
+
+  @media (max-width: 1199px) {
+    width: 45%;
+    padding: ${space.x4};
+
+    > h3 {
+      font-size: ${(p) => p.theme.typography.variants.fontSize.lg_md};
+      text-align: center;
+      font-weight: 400;
+    }
+
+    .mainInfo {
+      flex-direction: column;
+      gap: ${space.x4};
+      margin: ${space.x4} 0px;
+
+      > input {
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    width: 100%;
   }
 `

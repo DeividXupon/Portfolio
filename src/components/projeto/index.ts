@@ -16,12 +16,12 @@ export const Box = styled(motion.article)<{ $reverse?: boolean }>`
   @media (max-width: 992px) {
     flex-direction: column;
     align-items: center;
+    padding: 0px;
   }
 
   @media (max-width: 767px) {
     margin-bottom: ${space.x10};
     margin-top: ${space.x10};
-    padding: 0px;
   }
 `
 
